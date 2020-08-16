@@ -21,19 +21,19 @@ export class WebcamComponent {
 	constructor(private _loader: LoaderService) {}
 
 	getVideoElement() {
-		return document.getElementById('video') as any;
+		return document.getElementById('video') as HTMLVideoElement;
 	}
 
 	getCropBoxElement() {
-		return document.getElementById('crop-box') as any;
+		return document.getElementById('crop-box') as HTMLElement;
 	}
 
 	getImg2Element() {
-		return document.getElementById('img2') as any;
+		return document.getElementById('img2') as HTMLImageElement;
 	}
 
 	getCanvas2Element() {
-		return document.getElementById('overlay2') as any;
+		return document.getElementById('overlay2') as HTMLCanvasElement;
 	}
 
 	stopWebCam() {
@@ -70,8 +70,8 @@ export class WebcamComponent {
 		let streaming: boolean = false;
 
 		const cropBox = this.getCropBoxElement();
-		canvas2.setAttribute('width', cropBox.offsetWidth);
-		canvas2.setAttribute('height', cropBox.offsetHeight);
+		canvas2.setAttribute('width', cropBox.offsetWidth.toString());
+		canvas2.setAttribute('height', cropBox.offsetHeight.toString());
 
 		video.addEventListener(
 			'canplay',

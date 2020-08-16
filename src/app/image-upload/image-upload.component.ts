@@ -17,15 +17,15 @@ export class ImageUploadComponent {
 	constructor(private _loader: LoaderService) {}
 
 	getImg1Element() {
-		return document.getElementById('img1') as any;
+		return document.getElementById('img1') as HTMLImageElement;
 	}
 
 	getCanvas1Element() {
-		return document.getElementById('overlay1') as any;
+		return document.getElementById('overlay1') as HTMLCanvasElement;
 	}
 
 	getRefUploadInput() {
-		return document.getElementById('refImgUploadInput') as any;
+		return document.getElementById('refImgUploadInput') as HTMLInputElement;
 	}
 
 	async uploadRefImage() {
@@ -39,8 +39,8 @@ export class ImageUploadComponent {
 			this.hasImg = true;
 			setTimeout(async () => {
 				const canvas1 = this.getCanvas1Element();
-				canvas1.setAttribute('width', imgEle.clientWidth);
-				canvas1.setAttribute('height', imgEle.clientHeight);
+				canvas1.setAttribute('width', imgEle.clientWidth.toString());
+				canvas1.setAttribute('height', imgEle.clientHeight.toString());
 
 				await this.updateReferenceImageResults();
 			});
