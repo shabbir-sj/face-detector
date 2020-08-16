@@ -4,7 +4,7 @@ LABEL author = "Shabbir Hussain Bohra"
 WORKDIR /sites
 COPY . .
 RUN npm install
-RUN npm run build-ops:master
+RUN npm run build
 
 ##### STAGE 2: Setup
 FROM nginx:1.14.1-alpine
