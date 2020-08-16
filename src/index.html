@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="/" />
+		<meta charset="utf-8" />
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1 maximum-scale=1"
+		/>
+		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+	</head>
+	<body class="nb-theme-global">
+		<fd-app>
+			<style>
+				.gbl-spinner {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1003;
+					background: #f2f3f8;
+					overflow: hidden;
+				}
+
+				.gbl-spinner > p {
+					display: inline-block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					margin: 0;
+					padding: 0;
+					font-family: sans-serif;
+					font-size: 22px;
+				}
+
+				.gbl-spinner > p span {
+					font-size: 35px;
+					animation-name: blink;
+					animation-duration: 1.4s;
+					animation-iteration-count: infinite;
+					animation-fill-mode: both;
+				}
+
+				.gbl-spinner > p span:nth-child(2) {
+					animation-delay: 0.2s;
+				}
+
+				.gbl-spinner > p span:nth-child(3) {
+					animation-delay: 0.4s;
+				}
+
+				@keyframes blink {
+					0% {
+						opacity: 0.2;
+					}
+					20% {
+						opacity: 1;
+					}
+					100% {
+						opacity: 0.2;
+					}
+				}
+			</style>
+
+			<div id="nb-global-spinner" class="gbl-spinner">
+				<p>Loading<span>.</span><span>.</span><span>.</span></p>
+			</div>
+		</fd-app>
+	</body>
+</html>

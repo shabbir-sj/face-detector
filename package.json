@@ -1,0 +1,49 @@
+{
+	"name": "face-detector",
+	"version": "0.0.0",
+	"license": "face-detector",
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve --base-href /face-detector/",
+		"build": "ng build --base-href /face-detector/ --prod --aot",
+		"test": "ng test",
+		"test-ops:coverage": "rimraf coverage && npm run test -- --code-coverage",
+		"lint": "ng lint",
+		"lint:fix": "ng lint --fix",
+		"lint:styles": "stylelint ./src/**/*.scss",
+		"lint:ci": "npm run lint && npm run lint:styles"
+	},
+	"dependencies": {
+		"@angular/animations": "9.1.11",
+		"@angular/common": "9.1.11",
+		"@angular/compiler": "9.1.11",
+		"@angular/core": "9.1.11",
+		"@angular/localize": "^9.1.11",
+		"@angular/platform-browser": "9.1.11",
+		"@angular/platform-browser-dynamic": "9.1.11",
+		"bootstrap": "4.4.1",
+		"face-api.js": "^0.22.2",
+		"normalize.css": "6.0.0",
+		"pace-js": "1.0.2",
+		"rxjs": "6.5.5",
+		"rxjs-compat": "6.3.0",
+		"tslib": "1.10.0",
+		"zone.js": "~0.10.3"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "0.901.0",
+		"@angular/cli": "9.1.9",
+		"@angular/compiler-cli": "9.1.11",
+		"@angular/language-service": "9.1.11",
+		"@types/node": "12.11.1",
+		"codelyzer": "5.1.2",
+		"husky": "3.1.0",
+		"npm-run-all": "4.0.2",
+		"rimraf": "2.6.1",
+		"stylelint": "7.13.0",
+		"ts-node": "3.2.2",
+		"tslint": "5.11.0",
+		"tslint-language-service": "0.9.9",
+		"typescript": "3.8.3"
+	}
+}

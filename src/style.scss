@@ -1,0 +1,110 @@
+/*	
+	Override Bootstrap theme variables here :-
+	Do check nebular themeing system before adding or changing anything below this point
+
+	We can use a function called as darken() to darken the base color by a specified percentage, to maintanin consistency.
+
+	The theme colors will be used to set the color property in all the css.
+	Ex: For Text - text-grey // will set the text color to grey.
+		For backgroung - bg-matt-black // will set the background color to matt-black
+		For Border: - border-dark-blue // will set the border color to dark-blue
+	and so on.
+*/
+
+$theme-colors: (
+	'light-grey': #adb5bd,
+	'grey': #6c757d,
+	'dark-grey': #495057,
+	'dark-blue': #00567a,
+	'blue': #0079ad,
+	'sky-blue': #0092d1,
+	'light-blue': #e0eff6,
+	'light-green': #81ca95,
+	'green': green,
+	'light-red': #ff7777,
+	'red': #f55524,
+	'orange': #ff892a,
+	'pink': #dd5099,
+	'matt-black': #111111,
+	'black': #000000,
+	'brown': #6d4c41,
+	'whitesmoke': whitesmoke,
+	'gainsboro': gainsboro,
+);
+
+/*
+	Similar to $theme-color map, there are other maps as well, to give custom values or override existing, like,
+		$spacers() map - to give custom spacing
+		$sizes() map - to give custom sizes.
+		$grays() map - to give custom grey's
+		$colors() map - to give custom colors. 
+	and so on.
+*/
+
+// Give custom classes here :-
+// These custom classes will be used across all the modules and they will be applied globally
+
+/*
+	To include any of the values from the above maps, to make a custom class, it can be done as
+		.custom-element {
+			color: gray("100");
+			background-color: theme-color("dark");
+			color: color("purple");
+		}
+*/
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/type';
+
+html {
+	font-size: 13px;
+}
+
+body {
+	margin: 0;
+	background-color: #fafafa;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.image-container {
+	position: relative;
+}
+
+.image-container img {
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.card {
+	min-width: 300px;
+	min-height: 500px;
+	background-color: #e6f1f5;
+	border: 1px solid gainsboro;
+	border-radius: 10px;
+	padding: 2rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.image-container img {
+		max-width: 250px;
+		max-height: 250px;
+	}
+	
+	.card {
+		min-width: 200px;
+		min-height: inherit;
+	}
+}

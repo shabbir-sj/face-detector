@@ -1,0 +1,16 @@
+<div class="card">
+	<h1 class="mb-5">Result:</h1>
+	<h4 class="mb-4">Match Score: {{ matchScore }}</h4>
+	<h4 *ngIf="matchScore <= 0.6" class="bg-light-green p-2">
+		Face is similar
+	</h4>
+	<h4 *ngIf="matchScore > 0.6" class="bg-light-red p-2">
+		Face is not similar
+	</h4>
+
+	<div class="my-3">
+		<div class="mb-1">* Match score is euclidean distance.</div>
+		<div class="mb-1">* The lower the distance the more similar two faces are.</div>
+		<div>* Above 0.6 face is not cosider similar.</div>
+	</div>
+</div>

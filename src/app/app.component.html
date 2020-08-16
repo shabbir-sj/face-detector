@@ -1,0 +1,23 @@
+<fd-loader></fd-loader>
+
+<div class="p-3">
+	<h1 class="text-center header">Face Matcher</h1>
+
+	<div class="d-flex flex-md-row flex-column">
+		<div class="m-3">
+			<img-upload
+				(onImageSelect)="handleImageSelect($event)"
+			></img-upload>
+		</div>
+
+		<div class="m-3">
+			<webcam-selfie
+				(onImageSelect)="handleImageSelect($event)"
+			></webcam-selfie>
+		</div>
+
+		<div class="m-3" *ngIf="matchScore">
+			<result-display [matchScore]="matchScore"></result-display>
+		</div>
+	</div>
+</div>

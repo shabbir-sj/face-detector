@@ -1,0 +1,16 @@
+<div class="card">
+	<h2 class="mb-5">1. Upload Your Passport Size Photo</h2>
+	<div class="mb-5">
+		<label class="mr-3 text-grey">Upload Image:</label>
+		<input id="refImgUploadInput" type="file" class="bold" (change)="uploadRefImage()" accept=".jpg, .jpeg, .png">
+	</div>
+
+	<div *ngIf="noFaceDetected" class="text-red my-3">No face detected</div>
+
+	<div class="refrence-img-box" [hidden]="!hasImg">
+		<div class="image-container">
+			<img id="img1"/>
+			<canvas id="overlay1" class="overlay"></canvas>
+		</div>
+	</div>
+</div>
