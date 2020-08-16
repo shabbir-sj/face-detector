@@ -1,5 +1,5 @@
 # Face Detector/Matcher
-![Face Detector](https://github.com/shabbir-sj/face-detector/tree/master/src/assets/images/app_image.png)
+![Face Detector](src/assets/images/app_image.png)
 ## **[Click me for Live Demos!](https://shabbir-sj.github.io/face-detector/)**
 
 # Instructions to start project:
